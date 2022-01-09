@@ -1,0 +1,14 @@
+# Tuần 2: từ 10-01-22 đến 16-01-22
+- Tìm hiểu về Hệ điều hành và Linux
+	- Operating Systems & Linux Basics
+	- Introduction to Operating Systems
+	- Virtualization
+	- Package Manager - Installing Software
+	- Working with Vim Editor
+	- Users & Permissions
+	- Linux File System
+	- Basic Linux Commands
+	- Shell Scripting
+	- Environment Variables
+	- Networking
+	- SSH - Secure Shell
