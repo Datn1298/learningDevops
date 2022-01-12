@@ -195,6 +195,17 @@
 # Networking
 - How computer networks work?
 - What is LAN, Switch, Router, Subnet, Firewall, Gateway
+  1. LAN
+  - Là 1 hệ thống được kết nối với nhau bị giới hạn về số lượng và địa lý
+  - Most LANs connect to the Internet at a central point: a router
+  2. Switch
+  - Networking hardware
+  3. Router
+  - là thiết bị kết nối 2 hay nhiều packet-switchs networks hoặc subnetworks
+  - 2 chức năng chính
+    - cho phép các thiệt bị cùng kết nối internet
+    - quản lý lưu lượng giữa các mạng bằng cách chuyển tiếp các gói dữ liệu đến IP
+
 - What is an IP address and port?
 - What is a DNS and how does DNS resolution work?
 - Useful Networking Commands
@@ -203,5 +214,10 @@
 - What is SSH and how it works
 - SSH in Action:
   - Create Remote Server on Cloud
-  - Generate SSH Key Pair
+  - Setting up public key authentication
+    1. Generate an SSH key
+    - ssh-keygen -t rsa -b 4096
+    2. Copy the key to a serrver
+    - ssh-copy-id -i ~/.ssh/mykey user@host
+    - Add key to ~/.ssh/authorized_keys file
   - Execute a bash script on a remote machine
