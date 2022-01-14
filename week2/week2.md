@@ -1,50 +1,74 @@
 # Introduction to Operating Systems
-- What is an OS and how does it work?
-- Tasks of an OS
-- How an OS is constructed
-- How different OSs, like Unix, Linux, Windows and MacOS differ from each other
+1. What is an OS and how does it work?
+2. Tasks of an OS
+3. How an OS is constructed
+4. How different OSs, like Unix, Linux, Windows and MacOS differ from each other
 
-# Virtualization
-- Introduction to Virtual Machine
-- Setup a Linux Virtual Machine
+## Virtualization
+1. Introduction to Virtual Machine
+2. Setup a Linux Virtual Machine
 
-# Package Manager - Installing Software
-- What is a Package Manager and what are Software Repositories?
-- Learn all the options of installing software on Linux and how it all actually works in the background:
-  - APT
-  - APT vs APT-GET
-  - SNAP
-  - Ubuntu Software Center
-  - YUM
+## Package Manager - Installing Software
+1. What is a Package Manager and what are Software Repositories?
+2. Learn all the options of installing software on Linux and how it all actually works in the background:
+- APT
+- APT vs APT-GET
+- SNAP
+- Ubuntu Software Center
+- YUM
 
-# Working with Vim Editor
-- What is Vim?
-  - Vim =   Vi + IMproved
-  - Editor Words
-- Learn most important Vim Commands to work with Vim efficiently
-  1. Sửa file: vi file_name
-  2. Chuyển mode: Esc
-    - Chuyển sang mode Insert: Esc + I , A
-  3. 1 số lệnh trong mode insert
-    - Xoá 1 dòng: DD
-    - Xoá n dòng: DnD
-    - Copy 1 dòng: YY
-    - Copy n dòng: YnY
-  4. 1 số lệnh khác
-    - Quay lại: Esc + U
-    - Tìm kiếm: Esc + /
-      - Tìm kiếm tiếp theo: N
-    - Di chuyển đầu dòng: Ctrl + A
-    - Di chuyển xuống dòng cuối: Shift + G
-    - Thoát: ":" + w (write) + q (quit) + !(force)
-    - Hiển thị dòng: ":" + set number
-    - Di chuyển xuống dòng n: ":" + n 
+## Working with Vim Editor
+1. What is Vim?
+- Vim =   Vi + IMproved
+- Editor Words
+2. Learn most important Vim Commands to work with Vim efficiently
+- Sửa file
+````
+vi file_name
+````
+- Chuyển mode: Esc
+````
+# Chuyển sang mode Insert:
+$ Esc + I
+$ A
+````
+- 1 số lệnh trong mode insert
+````
+$ Xoá 1 dòng: DD
+$ Xoá n dòng: DnD
+$ Copy 1 dòng: YY
+$ Copy n dòng: YnY
+````
+- 1 số lệnh khác
+````
+# Quay lại
+$ Esc + U
 
-# Users & Permissions
-- Linux Accounts
-- Users, Groups
-  - ví dụ: -rwxrw-r-x
-    - ký tự đầu: file or dir
+# Tìm kiếm: 
+$ Esc + /
+# Tìm kiếm tiếp theo: N
+
+# Di chuyển đầu dòng
+$ Ctrl + A
+
+# Di chuyển xuống dòng cuối
+$ Shift + G
+
+# Thoát
+$ ":" + w (write) + q (quit) + !(force)
+
+# Hiển thị dòng
+$ ":" + set number
+
+# Di chuyển xuống dòng n: 
+$ ":" + n 
+````
+
+## Users & Permissions
+1. Linux Accounts
+2. Users, Groups
+- Ví dụ: -rwxrw-r-x
+- Ký tự đầu: file or dir
   1: Owner permissions:
     − The owner's permissions determine what actions the owner of the file can perform on the file.
     - từ ký tự 2 - 4
