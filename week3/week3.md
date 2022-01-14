@@ -4,9 +4,11 @@
 - cung cấp cho người dùng kho lưu trữ riêng chứa toàn bộ lịch sử thay đổi
 
 ## Setup git repository (remote and local)
-- Git global setup
-	- git config --global user.name "username"
-	- git config --global user.email mail
+1 Git global setup
+```
+- git config --global user.name "username"
+- git config --global user.email mail
+```
 
 ## Working with Git (git status, git commit, git add, git push)
 1. Git status
