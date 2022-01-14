@@ -1,0 +1,17 @@
+# Tuần 3: từ 17-01-22 đến 23-01-22
+- Version Control with Git
+  - Basic Concepts of Git
+  - Setup git repository (remote and local)
+  - Working with Git (git status, git commit, git add, git push)
+  - Initialize Git project locally
+  - Concept of Branches
+  - Merge Requests
+  - Deleting Branches
+  - Avoiding Merge Commits (rebase)
+  - Resolving Merge Conflicts
+  - Don't track certain files (.gitignore)
+  - Save work-in-progress changes (git stash)
+  - Going back in history (git checkout)
+  - Undoing commits (git revert, git reset)
+  - Merging Branches
+  - Git for DevOps
