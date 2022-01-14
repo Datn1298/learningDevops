@@ -78,18 +78,22 @@ git log
 
 2. Git diff
 - Hiển thị thông tin thay đổi
-	- Khi có sự thay đổi của thư mục làm việc mà chưa chỉ mục, xem sự thay đổi cú pháp với commit gần nhất:
+	- Khi có sự thay đổi của thư mục làm việc mà chưa chỉ mục, xem sự thay đổi cú pháp với commit gần nhất
 ````
 $ git diff
 ````
+
 	- Kiểm tra sử thạt đổi của staging
+
 ````
 $ git diff --staged
 ````
+
 	- Kiểm tra thay đổi giữa 2 commit
 ````
 $ git diff commit1 commit2
 ````
+
 	- Kiểm tra thay đổi của 2 nhánh
 ````
 $ git diff branch1 branch2
