@@ -44,6 +44,7 @@ services:
       - '$GITLAB_HOME/data:/var/opt/gitlab'
     networks:
       - gitlab
+
   gitlab-runner:
     image: gitlab/gitlab-runner:alpine
     container_name: gitlab-runner    
@@ -61,9 +62,9 @@ networks:
     name: gitlab-network
 ````
 
-Trong services gồm 2 images:
-	- Gitlab-ce: đóng vai trò Gitlab, nơi lưu trữ code và build image
-	- Gitlab-runner: nơi kết nối với Docker để có thể run image
+	- Trong services gồm 2 images:
+		- Gitlab-ce: đóng vai trò Gitlab, nơi lưu trữ code và build image
+		- Gitlab-runner: nơi kết nối với Docker để có thể run image
 
 Sau đó sử dụng câu lệnh sau:
 ````
@@ -82,7 +83,15 @@ docker-compose up -d
 - CI = Countinous Intergration
 	- liên tục tích hợp những thay đổi của dự án và test lại thường xuyên
 
+- Ưu điểm
+	- Commint code sớm, thường xuyên => phát hiện lỗi => sửa lỗi
+	- Không phụ thuộc vào IDE
+	- Tự động hoá việc build và kiểm tra code khi code thay đổi
+	- 
+
 2. CD là gì?
+- CD = Countinous Development
+	- 
 
 ## Setup CICD Gitlab
 1. Setup môi trường
