@@ -48,12 +48,29 @@
  Docker sẽ sử dụng chung Kernel (ví dụ: Window, Linux). Các container sẽ chứa những thư viện, ... và sử dụng chung kernel của máy chủ. Còn VM thì tách biệt, mỗi máy ảo sẽ có 1 HĐH riêng. Nên sẽ gây lãng phí 1 phần tài nguyên.
 
 5. Main Docker Commands
-  
-5. Debugging a Docker Container
-6. Demo Project Overview - Docker in Practice (Nodejs App with MongoDB and MongoExpress UI)
-7. Developing with Containers
-8. Docker Compose - Running multiple services
-9. Dockerfile - Building our own Docker Image
+6. Debugging a Docker Container
+7. Demo Project Overview - Docker in Practice (Nodejs App with MongoDB and MongoExpress UI)
+8. Developing with Containers
+9. Docker Compose - Running multiple services
+- Là 1 tool để định nghĩa và chạy multi-container Docker application
+- sử dụng .yml file
+-
+
+- Các commands:
+  - Up: chạy docker-compose file
+  ````
+  $ docker-compose up [OPTION]
+  ````
+  - Down: dừng containers và xoá các containers, networks, volumes, và images được tạo từ 'up'
+  ````
+  $ docker-compose dowm [OPTION]
+  ````
+  - Exec: execute 1 command trong 1 container đang chạy
+  ````
+  $ docker exec [OPTION (-it)] CONTAINER COMMAND  
+  ````
+10. Dockerfile - Building our own Docker Image
+
 10. Private Docker Repository - Pushing our built Docker Image into a private Registry on AWS
 11. Deploy containerized app
 12. Docker Volumes - Persist data in Docker
