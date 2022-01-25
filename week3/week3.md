@@ -117,6 +117,7 @@ $ git clone clone_git_url
 1. Liệt kê các branches
 ````
 $ git branch
+$ git branch -a
 ````
 
 2. Tạo branch mới
@@ -129,12 +130,17 @@ $ git branch branch_name
 $ git checkout branch_name
 ````
 
-4. Xoá branch
+4. Tạo và chuyển branch
+````
+$ git checkout -b branch_name
+````
+
+5. Xoá branch
 ````
 $ git brach -d branch_name
 ````
 
-5. Merge request
+6. Merge request
 - Khi chuyển qua nhánh khác, nên tạo merge request ngay khi có commit đầu tiên
 - Git Merge
 	- Sử dụng merge sẽ tạo ra 1 commit mới kết hợp từ 2 commit cuối cùng của 2 nhánh
@@ -158,12 +164,17 @@ $ git rebase branch_name
 	- k muốn thực hiện commit dư thừa
 - Git stash cho phép lưu những thay đổi mà k cần thiết phải commit
 	- dễ dàng chuyển sang nhánh khác mà k mất code
+- Cách lưu trữ của Stash giống như Stack
+	- Last In First Out
+
 ````
 # Đưa toàn bộ vào staged
 $ git add .
 
 # Sử dụng stash để thay đổi mà k cần commit:
-$ git stash # hoặc git stash save
+$ git stash 
+# hoặc 
+$ git stash save
 
 # Xem lại các thay đổi đã lưu
 $ git stash list
