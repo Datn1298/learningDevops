@@ -1,7 +1,7 @@
 # Docker
 - Docker là nền tảng phần mềm, cho phép xây dựng, triển khai, kiểm thử 1 cách dễ dàng.
 
-## Containers with Docker
+## Containers with Docker[https://github.com/Datn1298/learningDevops/blob/master/week5/main_docker_commands.md]
 1. Images
 - Image chứa các source code, thư viện, dependencies, tool, và các files khác cần thiết cho 1 ứng dụng để chạy
 - Images có tính chất chỉ đọc (read-only)
@@ -70,7 +70,10 @@
   $ docker exec [OPTION (-it)] CONTAINER COMMAND  
   ````
 10. Dockerfile - Building our own Docker Image
-
+- Là 1 text document, chứa các câu lệnh cho người dùng có thể gọi trong CLI để tạo ra 1 image
+- Sd __docker build__ để build 1 image từ Dockerfile
+- Dockerfile instructions
+  1. FROM
 10. Private Docker Repository - Pushing our built Docker Image into a private Registry on AWS
 11. Deploy containerized app
 12. Docker Volumes - Persist data in Docker
