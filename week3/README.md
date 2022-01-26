@@ -1,4 +1,4 @@
-# Tuần 3: từ 17-01-22 đến 23-01-22
+# Tuần 3: từ 10-01-22 đến 16-01-22
 - Version Control with Git
   - Basic Concepts of Git
   - Setup git repository (remote and local)
