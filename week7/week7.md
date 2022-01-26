@@ -1,0 +1,26 @@
+# Kubernetes
+## Tìm hiểu kiến trúc K8s( 1 day)
+## Tìm hiểu K8S Master Node (2.5 day)
+1. Etcd (0.5 day)
+2. Api Server (0.5 day)
+3. Controller Manager Service (0.5 day)
+4. Scheduler Service (0.5 day)
+5. Dashboard (0.5 day)
+## Tìm hiểu K8s Worker Node (10.5 days)
+1. Pod (0.5 day)
+2. Image (0.5 day)
+3. Service (svc) (0.5 day)
+4. Persistent Volumes NFS, GlusterFS (1 day)
+5. Namespaces (0.5 day)
+6. Ingress rules (0.5 day)
+7. Network policies (0.5 day)
+8. Network (1 day)
+9. ConfigMaps and Secrets (0.5 day)
+10. Controllers (0.5 day)
+11. Dashboard and Monitoring (0.5 day)
+## Kubernetes command-line tool(kubectl) (1 day)
+## Kubernetes clusters(kubeadm)(1,5 days)
+## Slide giới thiệu tông quan K8S(1.5 days)
+
+## Ref
+1. https://kubernetes.io/docs/home/
