@@ -1,7 +1,7 @@
 # Docker
 - Docker là nền tảng phần mềm, cho phép xây dựng, triển khai, kiểm thử 1 cách dễ dàng.
 
-## Containers with Docker[https://github.com/Datn1298/learningDevops/blob/master/week5/main_docker_commands.md]
+## Containers with Docker
 1. Images
 - Image chứa các source code, thư viện, dependencies, tool, và các files khác cần thiết cho 1 ứng dụng để chạy
 - Images có tính chất chỉ đọc (read-only)
@@ -9,7 +9,7 @@
 - Không thể run hay start 1 image
   - image chỉ để build ra container
 
-2. Container?
+2. Container
 - Container là 1 run-time environment - có thể chạy 1 ứng dụng đọc lập
 - Các container hoạt động độc lập, không ảnh hưởng đến các container khác
 
@@ -47,7 +47,7 @@
  
  Docker sẽ sử dụng chung Kernel (ví dụ: Window, Linux). Các container sẽ chứa những thư viện, ... và sử dụng chung kernel của máy chủ. Còn VM thì tách biệt, mỗi máy ảo sẽ có 1 HĐH riêng. Nên sẽ gây lãng phí 1 phần tài nguyên.
 
-5. Main Docker Commands
+5. [Main Docker Commands](https://github.com/Datn1298/learningDevops/blob/master/week5/main_docker_commands.md)
 6. Debugging a Docker Container
 7. Demo Project Overview - Docker in Practice (Nodejs App with MongoDB and MongoExpress UI)
 8. Developing with Containers
@@ -71,9 +71,75 @@
   ````
 10. Dockerfile - Building our own Docker Image
 - Là 1 text document, chứa các câu lệnh cho người dùng có thể gọi trong CLI để tạo ra 1 image
-- Sd __docker build__ để build 1 image từ Dockerfile
+- Sd *docker build* để build 1 image từ Dockerfile. 
 - Dockerfile instructions
   1. FROM
+  - Khởi tạo 1 stage mới
+  - Chỉ định Image cơ sở để thực hiện các câu lệnh tiếp theo. Các Image có thể lấy từ DockerHub
+  - Dockerfile hợp lệ khi bắt đầu bằng *FROM*
+  ````
+  $ FROM ubuntu
+  ````
+  2. ARG
+  - Khai báo biến nào đó
+  - Có thể đứng trước *FROM*
+  - Chỉ hoạt động trong quá trình build image (build-time)
+  ````
+  $ ARG $version=lastest
+  $ FROM ubuntu:${version}
+  ````
+  3. LABEL
+  - Để thêm metadata cho 1 image, ghi lại thông tin licension,...
+  - Dưới dạng key-value
+  ````
+  $ LABEL com.example.version="0.0.1-beta"
+  ````
+  4. CMD
+  - Chỉ chạy khi chạy container
+  - Có thể khai báo nhiều CMD, nhưng chỉ CMD cuối cùng mới được thực hiện
+  ````
+  $ CMD ["executable","param1","param2"] (exec form, this is the preferred form)
+  $ CMD ["param1","param2"] (as default parameters to ENTRYPOINT)
+  $ CMD command param1 param2 (shell form)
+  ````
+  5. ENV
+  - Khai báo biến môi trường
+  - Dưới dạng key-value
+  ````
+  $ ENV <key>=<value> ...
+
+  $ docker run --env <key>=<value>
+  ````
+  6. EXPOSE
+  - Thông báo Port
+  ````
+  $ EXPOSE 80/udp
+
+  # overwrite
+  $ docker run -p 80:80/tcp -p 80:80/udp
+  ````
+  7. RUN
+  - Chạy các câu lệnh trong quá trình build images
+  - Thường là các câu lệnh Linux
+  ````
+  $ RUN <command>
+  # RUN apt-get update
+  $ RUN ["executable", "param1", "param2"]
+  # RUN ["/bin/bash", "-c", "echo hello"]
+  ````
+  8. WORKDIR
+  - Nên luôn sử dụng *WORKDIR* để khai báo đường dẫn
+  ````
+  $ WORKDIR /path/to/workdir
+  # WORKDIR /abc
+  # RUN pwd
+  ````
+  9. COPY
+  - Copy từ máy local đi vào trong container
+  10. ADD
+  - Giống *COPY*
+  - Có thể tải file về. Nếu file là file nén thì sẽ tự động giải nén
+
 10. Private Docker Repository - Pushing our built Docker Image into a private Registry on AWS
 11. Deploy containerized app
 12. Docker Volumes - Persist data in Docker
