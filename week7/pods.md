@@ -17,7 +17,7 @@ Gồm 4 thành phần chính:
 	- name
 	- labels
 	- ...
-
+- Mục đích: quản lý resource
 
 4. spec
 
@@ -37,33 +37,4 @@ spec:
       env:
         - name: POSTGRES_PASSWORD
           value: mysecretpassword
-````
-
-Tạo 1 replicas: tạo file replicas.yml
-````
-apiVersion: v1
-kind: ReplicationController
-metada:
-  name: myapp-rc
-  labels:
-    app: myapp
-    type: FE
-spec:
-  template:
-    metadata:
-      name: postgres
-      labels:
-        tier: db-tier
-    spec:
-      containers:
-        - name: postgres
-          image: postgres
-          env:
-            - name: POSTGRES_PASSWORD
-              value: mysecretpasswordod
-  replicas: 3
-````
-Then run command:
-````
-$ kubectl create -f name_file
 ````

@@ -27,6 +27,11 @@
 	- Endpoint Controller
 	- Service Account
 	- Token Controller
+
+	# so sánh controll node vs node master
+	# pod có chạy trên master k
+	# 
+
 - Chi tiết của các hoạt động này được ghi vào etcd
 4. Scheduler Service (0.5 day)
 - Chịu trách nhiệm về scheduling applications hoặc container trên Node

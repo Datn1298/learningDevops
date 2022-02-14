@@ -88,6 +88,6 @@ $ kubectl sacle -replication=6 -f replicaset-definition
 $ kubectl edit replicaset name-replicaset
 ```
 
-kubectl delete replicaset replicaset-1 replicaset-2
-
 kubectl get pods
+
+
