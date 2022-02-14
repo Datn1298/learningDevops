@@ -21,7 +21,8 @@ Gồm 4 thành phần chính:
 
 4. spec
 
-Ví dụ: pod.yaml
+Ví dụ:
+Tạo 1 pod: tạo file pod.yaml
 ````
 apiVersion: v1
 kind: Pod
@@ -36,4 +37,33 @@ spec:
       env:
         - name: POSTGRES_PASSWORD
           value: mysecretpassword
+````
+
+Tạo 1 replicas: tạo file replicas.yml
+````
+apiVersion: v1
+kind: ReplicationController
+metada:
+  name: myapp-rc
+  labels:
+    app: myapp
+    type: FE
+spec:
+  template:
+    metadata:
+      name: postgres
+      labels:
+        tier: db-tier
+    spec:
+      containers:
+        - name: postgres
+          image: postgres
+          env:
+            - name: POSTGRES_PASSWORD
+              value: mysecretpasswordod
+  replicas: 3
+````
+Then run command:
+````
+$ kubectl create -f name_file
 ````
