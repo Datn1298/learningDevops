@@ -37,3 +37,37 @@ $ kubectl create -f deployment-definition.yaml
 ```cmd
 kubectl get deployments
 ```
+
+## Simmarize Commands
+1. Create
+```cmd
+$ kubectl create -f deployment-definition.yaml
+```
+
+2. Get
+```cmd
+$ kubectl get deployments
+```
+
+3. Update
+```cmd
+$ kubectl apply deployment-definition.yaml
+```
+
+```cmd
+$ kubectl set image deployment/myapp-deployment nginx=nginx:1.9.1
+```
+
+4. Status
+```cmd
+$ kubectl rollout status deployment/myapp-deployment
+```
+
+```cmd
+$ kubectl rollout history deployment/myapp-deployment
+```
+
+5. Rollback
+```cmd
+$ kubectl rollout undo deployment/myapp-deployment
+```

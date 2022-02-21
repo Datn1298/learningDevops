@@ -91,7 +91,6 @@ Kubeproxy
 11. Dashboard and Monitoring (0.5 day)
 ## Kubernetes command-line tool(kubectl) (1 day)
 ## Kubernetes clusters(kubeadm)(1,5 days)
-## Slide giới thiệu tông quan K8S(1.5 days)
 
 ## Ref
 1. https://kubernetes.io/docs/home/
